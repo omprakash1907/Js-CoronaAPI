@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fontAwsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- boostrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section class="container mx-auto pt-5 d-flex justify-content-between  ">
+        <div class="weather-1 col-5">
+            <h6 class="mb-3 fw-normal   text-center mt-3" style="color: #6c757d;">Search your distric or state</h6>
+            <input type="search" placeholder="Search Your City" class="search text-white w-100 mb-3" id="cityName" onkeyup="search(this)">
+            <div class=" text-white w-100 mb-3 search-box" id="search-box" style="display: none;"
+                style="min-height: 400px;">
+                <ul id="search-list" class="ps-0 mb-0 ">
+
+                </ul>
+            </div>
+            <!-- <p class="btn btn-primary w-100 fw-bold " id="error" style="display: none;"></button> -->
+        </div>
+        <div class="weather col-6">
+            <div class=" d-flex  justify-content-between ">
+                <div>
+                    <h1 class="india fw-bold d-inline-block mb-0 ">India</h1>
+                    <p class="primary-color " style="font-size: 12px;">Last Updated on 01 Nov, 11:20 AM IST</p>
+                </div>
+                <div class="text-end  accordion ">
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px; color:  rgba(150,115,185,.7333333333333333);">
+                        Tested</h5>
+                    <h4 class="mb-0 fw-bold " style="    color: #9673b9;">60,92,01,294</h4>
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px; color:  rgba(150,115,185,.7333333333333333);">As
+                        of 31 October</h5>
+                </div>
+            </div>
+            <div class="footer text-center ">
+                <a href="#" class="fw-bold d-inline-block text-capitalize  ">covid19india</a>
+                <p class="primary-color mb-0 mt-1" style="font-size: 12px;">We stand with everyone fighting on the frontlines</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto pt-5  " id="result" style="display: none;">
+        <div class="weather col-7  mx-auto ">
+            <div class=" d-flex  justify-content-between ">
+                <div>
+                    <h1 class="india fw-bold d-inline-block mb-0 " id="city"></h1>
+                    <p class="primary-color " style="font-size: 12px;">Last Updated on 01 Nov, 11:20 AM IST</p>
+                </div>
+            </div>
+            <div class="d-flex  justify-content-between ">
+                <div class="col-3 confirmed hover text-center px-2 py-5 rounded-2 me-1">
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px; color: red">
+                        Confirmed</h5>
+                    <h4 class="mb-0 fw-bold " style=" color: red;" id="Confirmed"></h4>
+                </div>
+                <div class="col-3 active  hover text-center px-2 py-5 rounded-2 me-1">
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px; color: #007bff">
+                        Active</h5>
+                    <h4 class="mb-0 fw-bold " style=" color: #007bff;" id="active"></h4>
+                </div>
+                <div class="col-3 recovered hover text-center px-2 py-5 rounded-2 me-1">
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px; color: #28a745">
+                        Recovered</h5>
+                    <h4 class="mb-0 fw-bold " style=" color: #28a745;" id="recovered"></h4>
+                </div>
+                <div class="col-3 death hover text-center px-2 py-5 rounded-2 me-1">
+                    <h5 class="mb-0 fw-bold " style="font-size: 14px; color: #6c757d" >
+                        Death</h5>
+                    <h4 class="mb-0 fw-bold " style=" color: #6c757d;"  id="death"></h4>
+                </div>
+            </div>
+            
+
+
+           
+
+        </div>
+    </section>
+
+</body>
+
+</html>
+<script src="assets/js/jquery-3.6.4.min.js"></script>
+<script src="assets/js/corona.js"></script>
